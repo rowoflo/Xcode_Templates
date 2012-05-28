@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>DefaultCompletionName</key>
+	<string>CPPClassTemplate</string>
+	<key>Description</key>
+	<string>A C++ template class, with a header file.</string>
+	<key>MainTemplateFile</key>
+	<string>___FILEBASENAME___.cpp</string>
+	<key>CounterpartTemplateFile</key>
+	<string>___FILEBASENAME___.h</string>
+	<key>Summary</key>
+	<string>A C++ class template</string>
+</dict>
+</plist>
