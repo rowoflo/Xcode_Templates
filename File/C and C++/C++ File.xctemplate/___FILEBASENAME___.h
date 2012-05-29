@@ -3,11 +3,33 @@
  ___FILENAME___
  ___PROJECTNAME___ Project
  
- *** DESCRIPTION ***
+ DESCRIPTION:
+    description...
  
- Initially created by ___FULLUSERNAME___ on ___DATE___.
+ FILES:
+    ___FILEBASENAME___.h
+    ___FILEBASENAME___.cpp
  
- Version 1.0
+ DEPENDENCIES:
+ 
+ FUNCTIONS:
+    type method1(type arg1);
+        Description... .
+            arg1 - description... .
+ 
+ NOTES:
+ 
+ 
+ EXAMPLES:
+    Example 1: description
+    ----------------------------------------------------------------------------
+    code...
+    ----------------------------------------------------------------------------
+ 
+ 
+ VERSIONS:
+    1.0 - ___DATE___ - ___FULLUSERNAME___ (___WEBSITE___)
+ 
  -------------------------------------------------------------------------------
  */
 

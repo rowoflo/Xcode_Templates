@@ -5,7 +5,7 @@
  
  *** DESCRIPTION ***
  
- Initially created by ___FULLUSERNAME___ on ___DATE___.
+ Initially created by ___FULLUSERNAME___ (___WEBSITE___) on ___DATE___.
  
  Version 1.0
  -------------------------------------------------------------------------------

@@ -3,13 +3,25 @@
  ___FILENAME___
  ___PROJECTNAME___ Project
  
- Class description... .
+ CLASS NAME:
+    ___FILEBASENAME___
+ 
+ DESCRIPTION:
+    description...
+ 
+ FILES:
+    ___FILEBASENAME___.h
+    ___FILEBASENAME___.cpp
+ 
+ DEPENDENCIES:
+ 
  
  CONSTRUCTORS:
     ___FILEBASENAME___();    
  
  PUBLIC PROPERTIES:
     prop1 - description... .
+ 
     prop2 - description... .
  
  PUBLIC METHODS:
@@ -21,11 +33,15 @@
  
  
  EXAMPLES:
+    Example 1: description
+    ----------------------------------------------------------------------------
+    code...
+    ----------------------------------------------------------------------------
  
  
- Initially created by ___FULLUSERNAME___ on ___DATE___.
+ VERSIONS:
+    1.0 - ___DATE___ - ___FULLUSERNAME___ (___WEBSITE___)
  
- Version 1.0
  -------------------------------------------------------------------------------
  */
 
