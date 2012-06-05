@@ -87,7 +87,7 @@ BOARD = uno
 
 # Directory continaing user added libraries ------------------------------------
 #-------------------------------------------------------------------------------
-ARDUINO_DIR = ~/Arduino
+ARDUINO_DIR = ~/Dropbox/Arduino
 
 
 # Directory continaing Arduino.app ---------------------------------------------
@@ -250,7 +250,7 @@ $(sourceName).hex : $(sourceName).elf
 	
 $(sourceName).elf : $(sourceName).o $(userSourceLibDepenO) $(arduinoStaticLibDir)/arduino.a
 	$(LD) $(LDFLAGS) -o $@ $(sourceName).o  $(userSourceLibDepenO) \
-	$(AVRLib)/libm.a $(arduinoStaticLibDir)/arduino.a 
+	$(arduinoStaticLibDir)/arduino.a $(AVRLib)/libm.a
 	
 $(sourceName).o : $(sourceName).cpp $(userSourceLibDepenH)
 	$(CPP) -c $(arduinoIncs) $(userIncs) $(CPPFLAGS) $< -o $@
@@ -340,4 +340,4 @@ $(arduinoLibDir)/$(arduinoObjDirName)/%.o : %.cpp
 
 # Debug target ------------------------------------------------------------------
 debug :
-	@echo $(userLibIncs)
+	@echo $(mcu)
