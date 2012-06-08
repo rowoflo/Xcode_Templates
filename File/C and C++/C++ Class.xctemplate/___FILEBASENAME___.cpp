@@ -46,6 +46,15 @@ ___FILEBASENAME___::___FILEBASENAME___(const ___FILEBASENAME___& srcObj) {
     copyHelper(srcObj);
 }
 
+// Copy helper function
+void ___FILEBASENAME___::copyHelper(const ___FILEBASENAME___& srcObj) {
+    
+}
+
+//------------------------------------------------------------------------------
+// Overloaded Operators
+//------------------------------------------------------------------------------
+
 // Assignment operator
 const ___FILEBASENAME___& ___FILEBASENAME___::operator=(const ___FILEBASENAME___& rhsObj) {
 	// Self-assignment check
@@ -60,16 +69,6 @@ const ___FILEBASENAME___& ___FILEBASENAME___::operator=(const ___FILEBASENAME___
     
     return (*this);
 }
-
-// Copy helper function
-void ___FILEBASENAME___::copyHelper(const ___FILEBASENAME___& srcObj) {
-    
-}
-
-//------------------------------------------------------------------------------
-// Overloaded Operators
-//------------------------------------------------------------------------------
-
 
 //------------------------------------------------------------------------------
 // Public Member Functions

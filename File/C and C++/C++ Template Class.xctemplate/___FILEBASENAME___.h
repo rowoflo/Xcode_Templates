@@ -84,13 +84,12 @@ public:
     // Copy constructor
     ___FILEBASENAME___(const ___FILEBASENAME___<T>& srcObj);
     
-    // Assignment operator
-    const ___FILEBASENAME___& operator=(const ___FILEBASENAME___<T>& rhsObj);
-    
     
     //--------------------------------------------------------------------------
     // Overloaded Operators
     //--------------------------------------------------------------------------
+    // Assignment operator
+    const ___FILEBASENAME___& operator=(const ___FILEBASENAME___<T>& rhsObj);
     
     
     //--------------------------------------------------------------------------

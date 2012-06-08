@@ -48,6 +48,16 @@ ___FILEBASENAME___<T>::___FILEBASENAME___(const ___FILEBASENAME___<T>& srcObj) {
     copyHelper(srcObj);
 }
 
+// Copy helper function
+template <typename T>
+void ___FILEBASENAME___<T>::copyHelper(const ___FILEBASENAME___<T>& srcObj) {
+    
+}
+
+//------------------------------------------------------------------------------
+// Overloaded Operators
+//------------------------------------------------------------------------------
+
 // Assignment operator
 template <typename T>
 const ___FILEBASENAME___<T>& ___FILEBASENAME___<T>::operator=(const ___FILEBASENAME___<T>& rhsObj) {
@@ -63,17 +73,6 @@ const ___FILEBASENAME___<T>& ___FILEBASENAME___<T>::operator=(const ___FILEBASEN
     
     return (*this);
 }
-
-// Copy helper function
-template <typename T>
-void ___FILEBASENAME___<T>::copyHelper(const ___FILEBASENAME___<T>& srcObj) {
-    
-}
-
-//------------------------------------------------------------------------------
-// Overloaded Operators
-//------------------------------------------------------------------------------
-
 
 //------------------------------------------------------------------------------
 // Public Member Functions
