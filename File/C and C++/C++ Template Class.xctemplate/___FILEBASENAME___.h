@@ -19,12 +19,12 @@
  CONSTRUCTORS:
     ___FILEBASENAME___();    
  
- PUBLIC PROPERTIES:
+ PROPERTIES:
     prop1 - description... .
  
     prop2 - description... .
  
- PUBLIC METHODS:
+ METHODS:
     type method1(type arg1);
         Description... .
             arg1 - description... .
