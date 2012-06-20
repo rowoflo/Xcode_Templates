@@ -62,7 +62,7 @@
 					<string>/bin/sh</string>
 					<key>ShellScript</key>
 					<string>echo &apos;===== BUILDING FILE FOR TARGET UPLOAD =====&apos;
-cd "$PROJECT_DIR"/"$PROJECT_NAME"
+cd $PROJECT_DIR/$PROJECT_NAME
 make compile
 exit 0</string>
 				</dict>
@@ -87,7 +87,7 @@ exit 0</string>
 					<string>/bin/sh</string>
 					<key>ShellScript</key>
 					<string>echo &apos;===== BUILDING FILE FOR TARGET UPLOAD =====&apos;
-cd "$PROJECT_DIR"/"$PROJECT_NAME"
+cd $PROJECT_DIR/$PROJECT_NAME
 make BOARD=&quot;atmega328&quot; upload
 exit 0</string>
 				</dict>
@@ -112,8 +112,33 @@ exit 0</string>
 					<string>/bin/sh</string>
 					<key>ShellScript</key>
 					<string>echo &apos;===== BUILDING FILE FOR TARGET UPLOAD =====&apos;
-cd "$PROJECT_DIR"/"$PROJECT_NAME"
+cd $PROJECT_DIR/$PROJECT_NAME
 make BOARD=&quot;uno&quot; upload
+exit 0</string>
+				</dict>
+			</array>
+		</dict>
+		<dict>
+			<key>Name</key>
+			<string>Upload Nano</string>
+			<key>TargetType</key>
+			<string>Aggregate</string>
+			<key>SharedSettings</key>
+			<dict>
+				<key>PRODUCT_NAME</key>
+				<string>$(TARGET_NAME)</string>
+			</dict>
+			<key>BuildPhases</key>
+			<array>
+				<dict>
+					<key>Class</key>
+					<string>ShellScript</string>
+					<key>ShellPath</key>
+					<string>/bin/sh</string>
+					<key>ShellScript</key>
+					<string>echo &apos;===== BUILDING FILE FOR TARGET UPLOAD =====&apos;
+cd $PROJECT_DIR/$PROJECT_NAME
+make BOARD=&quot;nano328&quot; upload
 exit 0</string>
 				</dict>
 			</array>
@@ -137,7 +162,7 @@ exit 0</string>
 					<string>/bin/sh</string>
 					<key>ShellScript</key>
 					<string>echo &apos;===== BUILDING FILE FOR TARGET UPLOAD =====&apos;
-cd "$PROJECT_DIR"/"$PROJECT_NAME"
+cd $PROJECT_DIR/$PROJECT_NAME
 make clean
 exit 0</string>
 				</dict>
