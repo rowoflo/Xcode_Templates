@@ -80,7 +80,7 @@
 SOURCE = main.cpp
 
 
-# Name of source file with extension (e.g. main.cpp)----------------------------
+# Name of Arduino board (e.g. uno) ---------------------------------------------
 #-------------------------------------------------------------------------------
 BOARD = uno
 
