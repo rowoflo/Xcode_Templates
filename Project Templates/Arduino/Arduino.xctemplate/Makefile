@@ -164,10 +164,10 @@ CPPFLAGS := -DF_CPU=$(cpu) \
 			-mmcu=$(mcu) \
 			-Os \
 			-fno-exceptions -ffunction-sections -fdata-sections
-			
+
 LDFLAGS := -mmcu=$(mcu) \
            -Wl,--gc-sections
-           
+
 # Define non-implicit rule option variables  -----------------------------------
 AVRDUDEFLAGS := -C $(AVRDUDEConf) \
 				-p $(mcu) \
@@ -175,7 +175,7 @@ AVRDUDEFLAGS := -C $(AVRDUDEConf) \
 				-P $(PORT) \
 				-b $(baud) \
 				-D
-				
+
 # Define includes for compiler  ------------------------------------------------
 coreIncs     := -I$(arduinoCoreDir)
 variantsIncs := -I$(arduinoVariantsDir)/$(variant)
@@ -230,10 +230,10 @@ cleanAll : clean
 	rm -R $(arduinoCoreDir)/../$(arduinoObjDirName); \
 	rm -R $(arduinoLibDir)/$(arduinoObjDirName); \
 	rm -R $(userLibDir)/*/*.o
-	
+
 clean :
 	@-rm *.o *.elf *.hex
-	
+
 upload : compile
 	$(AVRDUDE) $(AVRDUDEFLAGS) -U flash:w:$(sourceName).hex
 
@@ -247,14 +247,14 @@ libStatic : $(arduinoStaticLibDir)/arduino.a
 # Edit this part to allow EEPROM to be programmed
 $(sourceName).hex : $(sourceName).elf
 	$(AVRObjCopy) -j .text -j .data -O ihex $? $@
-	
+
 $(sourceName).elf : $(sourceName).o $(userSourceLibDepenO) $(arduinoStaticLibDir)/arduino.a
 	$(LD) $(LDFLAGS) -o $@ $(sourceName).o  $(userSourceLibDepenO) \
 	$(arduinoStaticLibDir)/arduino.a $(AVRLib)/libm.a
-	
+
 $(sourceName).o : $(sourceName).cpp $(userSourceLibDepenH)
 	$(CPP) -c $(arduinoIncs) $(userIncs) $(CPPFLAGS) $< -o $@
-	
+
 $(arduinoStaticLibDir)/arduino.a : $(arduinoObjs)
 	@if [ ! -d $(arduinoStaticLibDir) ]; \
 	then \
@@ -268,11 +268,12 @@ $(arduinoStaticLibDir)/arduino.a : $(arduinoObjs)
 
 # Implicit pattern rules for files ----------------------------------------------
 %.o : %.c %.h
-	$(CC) $(arduinoIncs) $(CFLAGS) -c $< -o $@
+	$(CC) $(arduinoIncs) $(userIncs) $(CFLAGS) -c $< -o $@
 
 %.o : %.cpp %.h
-	@$(CPP) $(arduinoIncs) $(CPPFLAGS) -c $< -o $@
-	
+	@$(CPP) $(arduinoIncs) $(userIncs) 
+$(CPPFLAGS) -c $< -o $@
+
 %.h : %.cpp
 
 %.h : %.c
@@ -292,7 +293,7 @@ $(arduinoCoreDir)/../$(arduinoObjDirName)/%.o : $(arduinoCoreDir)/%.c
 		mkdir -p $(dir $@); \
 	fi
 	@$(CC) $(coreIncs) $(variantsIncs) $(CFLAGS) -c $< -o $@
-	
+
 $(arduinoCoreDir)/../$(arduinoObjDirName)/%.o : $(arduinoCoreDir)/%.cpp $(arduinoCoreDir)/%.h
 	@if [ ! -d $(dir $@) ]; \
 	then \
